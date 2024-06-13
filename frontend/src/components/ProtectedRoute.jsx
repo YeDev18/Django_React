@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import api from '../api';
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '../constants';
-
+// eslint-disable-next-line react/prop-types
 function ProtectedRoute({ children }) {
   const [isAuthorized, setIsAuthorized] = useState(null);
 

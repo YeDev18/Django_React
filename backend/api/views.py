@@ -10,7 +10,7 @@ class NoteListCreate(generics.ListCreateAPIView):  #C'est a partir des Generics 
       serializer_class= NoteSerializer
       permission_classes = [IsAuthenticated]
 
-      def get_query(self):  #Pour crèer une note
+      def get_queryset(self):  #Pour crèer une note
             user = self.request.user
             return Notes.objects.filter(author=user)
       def perform_create(self, serializer):  #Je  Dois voir la doc pour ça 
